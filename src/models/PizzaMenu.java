@@ -3,6 +3,7 @@ package models;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class PizzaMenu {
 
@@ -41,5 +42,14 @@ public class PizzaMenu {
 
     public int getMenuSize(){
         return menuItems.size();
+    }
+
+    public LocalDateTime getLastUpdate(){
+        return lastUpdate;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        return ((PizzaMenu)obj).getMenuSize() == getMenuSize();
     }
 }
